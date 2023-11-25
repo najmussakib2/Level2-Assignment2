@@ -5,3 +5,9 @@ Level-2 Assignment-2
 -Express
 -MongoDB
  -Mongoose
+
+<br>
+__Depedency Install__
+```
+npm install
+```
