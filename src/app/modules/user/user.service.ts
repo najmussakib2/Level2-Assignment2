@@ -12,28 +12,6 @@ const createUser = async (userData:IUser) =>{
     return userWithoutSensitiveInfo;
 }
 
-// const getAllUsers = async () =>{
-//     const users = await User.find();   
-//     const newUsers = users.map(user=>{
-//         const sanitizedUser = user.toObject();
-
-//         const { password, _id,orders,__v,hobbies,isActive, ...userWithoutSensitiveInfo } = sanitizedUser;
-    
-//         return userWithoutSensitiveInfo;
-//     })
-    
-//     return newUsers
-// }
-
-// const getSingleUser = async (userId:string):Promise<IUser | null> =>{
-//     try {
-// const user = await User.findOne({userId});
-// return user;
-// } catch (error) {
-//     console.error('Error finding user by ID:');
-//     throw error;
-//     }}
-
 const getAllUsers = async () => {
     const newUsers = await User.aggregate([
         {
