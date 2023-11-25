@@ -33,15 +33,6 @@ export interface IUser {
   userExists(id:number):Promise<IUser | null>;
   }
 
-//  export interface TUserModel extends Model<IUser> {
-//     findUserWithoutPassword(id:number):Partial<IUser | null>;
-//   }
-
-//   export interface IUserMethods {
-//     isUserExists(id:string):Promise<IUser | null>;
-//   }
-
-//   export type TUserModel = Model<IUser, Record<string, never>, IUserMethods>;
 
 
 
