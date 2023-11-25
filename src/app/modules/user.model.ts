@@ -52,14 +52,6 @@ const userSchema = new Schema <IUser,TUserModel>({
       }
 })
 
-// userSchema.methods.isUserExists =async function(id:number): Promise<boolean>{
-//     const existingUser = await User.findOne({userId:id});
-//     return !!existingUser;
-// }
-// ,{
-//     toJSON:{virtuals:true},
-//     toObject:{virtuals:true}
-// }
 
 userSchema.statics.userExists = async (userId: number) => {
     const existingUser = await User.findOne({ userId });
